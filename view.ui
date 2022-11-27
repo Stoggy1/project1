@@ -19,7 +19,7 @@
      <rect>
       <x>130</x>
       <y>50</y>
-      <width>113</width>
+      <width>41</width>
       <height>20</height>
      </rect>
     </property>
@@ -133,6 +133,16 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_4">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>50</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
     </property>
    </widget>
   </widget>
