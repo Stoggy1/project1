@@ -15,8 +15,8 @@ class Controller(QMainWindow, Ui_MainWindow):
 
     def submit(self):
         try:
-            value_x = float(self.lineEdit_4.text())
-            exponent_y = float(self.lineEdit.text())
+            value_x = float(self.lineEdit.text())
+            exponent_y = float(self.lineEdit_4.text())
             cats = int(self.lineEdit_2.text())
             aliens = int(self.lineEdit_3.text())
             catEars = cat_ears(cats)
@@ -31,7 +31,10 @@ class Controller(QMainWindow, Ui_MainWindow):
                                  'cannot have decimal place')
 
         except RuntimeError:
-            self.label_5.setText('Cat ears and Alien ears must be positive integers.')
+            self.label_6.setText('both ears must be positive and below 993')
+
+        except RuntimeWarning:
+            self.label_7.setText('Exponent is too big for computer to compute.')
 
     def delete(self):
         self.lineEdit.setText('')
@@ -39,3 +42,5 @@ class Controller(QMainWindow, Ui_MainWindow):
         self.lineEdit_3.setText('')
         self.lineEdit_4.setText('')
         self.label_5.setText('')
+        self.label_6.setText('')
+        self.label_7.setText('')

@@ -3,7 +3,10 @@ def power(value_x, exponent_y):
     if exponent_y == 1:
         return value_x
     if exponent_y != 1:
-        return value_x * power(value_x, exponent_y - 1)
+        expo = value_x * power(value_x, exponent_y - 1)
+        if expo > 999999999999:
+            raise RuntimeWarning
+        return expo
 
 
 def cat_ears(n):
