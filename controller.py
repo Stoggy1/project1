@@ -15,13 +15,10 @@ class Controller(QMainWindow, Ui_MainWindow):
 
     def submit(self) -> None:
         """
-        This method is called when the 'submit' button is clicked. It gets the
-    values from the line edits
-        and calls the relevant functions. If a value error is raised, it
-    displays an error message. If a
-        runtime error is raised, it displays an error message. If a
-    runtime warning is raised, it displays
-        an error message.
+        This method is called when the submit button is clicked. It gets the
+    values and calls the relevant functions. If a value error is raised, it displays an error message.
+        If a runtime error is raised, it displays an error message. If a runtime warning is raised,
+    it displays an error message.
         """
 
         try:
@@ -48,7 +45,7 @@ class Controller(QMainWindow, Ui_MainWindow):
 
     def delete(self) -> None:
         """
-            This method is called when the 'delete' button is clicked. It resets the values of all the line edits
+            This method is called when the delete button is clicked. It resets the values of all the line edits
             and labels to be empty.
         """
         self.lineEdit.setText('')
