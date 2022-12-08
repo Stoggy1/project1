@@ -13,7 +13,17 @@ class Controller(QMainWindow, Ui_MainWindow):
         self.pushButton.clicked.connect(lambda: self.submit())
         self.pushButton_2.clicked.connect(lambda: self.delete())
 
-    def submit(self):
+    def submit(self) -> None:
+        """
+        This method is called when the 'submit' button is clicked. It gets the
+    values from the line edits
+        and calls the relevant functions. If a value error is raised, it
+    displays an error message. If a
+        runtime error is raised, it displays an error message. If a
+    runtime warning is raised, it displays
+        an error message.
+        """
+
         try:
             value_x = float(self.lineEdit.text())
             exponent_y = float(self.lineEdit_4.text())
@@ -36,7 +46,11 @@ class Controller(QMainWindow, Ui_MainWindow):
         except RuntimeWarning:
             self.label_7.setText('Exponent is too big for computer to compute.')
 
-    def delete(self):
+    def delete(self) -> None:
+        """
+            This method is called when the 'delete' button is clicked. It resets the values of all the line edits
+            and labels to be empty.
+        """
         self.lineEdit.setText('')
         self.lineEdit_2.setText('')
         self.lineEdit_3.setText('')
