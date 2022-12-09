@@ -2,6 +2,7 @@ from PyQt5.QtWidgets import *
 from view import *
 from functions import *
 
+
 QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling, True)
 QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_UseHighDpiPixmaps, True)
 
