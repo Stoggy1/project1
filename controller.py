@@ -39,7 +39,7 @@ class Controller(QMainWindow, Ui_MainWindow):
                                  f'                       Alien ears in total:        {alien}')
         except ValueError:
             self.label_5.setText('exponent, cat ears, and alien ears \nneed to be numeric \ne. g. 10, 1, 5, '
-                                 'cannot have decimal place')
+                                 'can have decimal place for exponents')
 
         except RuntimeError:
             self.label_6.setText('both ears must be positive and below 993')
