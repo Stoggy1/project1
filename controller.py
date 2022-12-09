@@ -8,7 +8,10 @@ QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_UseHighDpiPixmaps, True)
 
 
 class Controller(QMainWindow, Ui_MainWindow):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
+        """
+        constructor method that sets up controller.
+        """
         super().__init__(*args, **kwargs)
         self.setupUi(self)
         self.pushButton.clicked.connect(lambda: self.submit())
@@ -16,8 +19,8 @@ class Controller(QMainWindow, Ui_MainWindow):
 
     def submit(self) -> None:
         """
-        This method is called when the submit button is clicked. It gets the
-    values and calls the relevant functions. If a value error is raised, it displays an error message.
+        Method is called when the submit button is clicked. It  gets the
+    values and calls the function. If a value error is raised, it displays an error message.
         If a runtime error is raised, it displays an error message. If a runtime warning is raised,
     it displays an error message.
         """
@@ -46,7 +49,7 @@ class Controller(QMainWindow, Ui_MainWindow):
 
     def delete(self) -> None:
         """
-            This method is called when the delete button is clicked. It resets the values of all the line edits
+            Method is called when the delete button is clicked. It resets the values of all the line edits
             and labels to be empty.
         """
         self.lineEdit.setText('')
